@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  node:
+    image: registry.gitlab.com/appliedsystems/us-rating/containers/devcontainers/node12:v1.26.17
+    user: vscode
+    volumes:
+      - ..:/workspace:delegated
+      - exenstions:/home/vscode/.vscode-server/extensions
+      - cache:/cache
+      - history:/commandhistory
+      - node_modules:/workspace/node_modules
+    command: sleep infinity
+    ports:
+      - 6006:6006
+
+volumes:
+  cache:
+  history:
+  node_modules:
+  exenstions:

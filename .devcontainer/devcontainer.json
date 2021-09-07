@@ -1,0 +1,14 @@
+{
+  "name": "React PDF",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "node",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vsliveshare.vsliveshare",
+    "ms-vsliveshare.vsliveshare-audio",
+    "eamodio.gitlens"
+  ],
+  "postCreateCommand": "sudo chown -R vscode:vscode node_modules && npm install"
+}
